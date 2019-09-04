@@ -1,4 +1,4 @@
-import { UPDATE_VALUE } from "/..Actions/actionTypes";
+import { UPDATE_VALUE } from "../Actions/actionTypes";
 
 const INITIAL_STATE = {
     value: "",
@@ -14,6 +14,6 @@ export default (state = INITIAL_STATE, action) => {
             }
         default:
             return state;
-            
-    }
+
+    };
 };

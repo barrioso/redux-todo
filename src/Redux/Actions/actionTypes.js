@@ -1,1 +1,1 @@
-export const UDAPET_VALUE = "update_value";
+export const UPDATE_VALUE = "update_value"
