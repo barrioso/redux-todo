@@ -1,5 +1,7 @@
 import React from 'react';
 import TextField from "@material-ui/core/TextField";
+import * as actions from "./Redux/Actions"
+import { connect } from "react-redux"
 
 const TodoForm = ({ value, saveTodo, updateValue }) =>(
     <form
@@ -14,8 +16,18 @@ const TodoForm = ({ value, saveTodo, updateValue }) =>(
         margin="normal"
         value={value}
         onChange={updateValue}
+        onChange={e => updateValue(e.target.value)}
         />
     </form>
 ); 
 
-export default TodoForm;
+const mapStateToProps = ({ todoReducer }) => {
+    const { value } = todoReducer;
+    return { value };
+}
+
+export default connect (
+    mapStateToProps,
+    actions)
+    (TodoForm);
+
