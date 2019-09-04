@@ -64,7 +64,7 @@ import TodoList from "./TodoList";
         </Grid>
         <Grid container justify="center">
           <Grid item md={8}>
-           {/* <TodoList /> */}
+           <TodoList />
             {/*todos={this.state.todos}
             deleteTodo={this.deleteTodo}
             toggleCompleted={this.toggleCompleted} */}
